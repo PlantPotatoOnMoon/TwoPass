@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.DS_Store
+# weights, caches and run outputs
+*.pt
+*.pth
+*.safetensors
+*.npz
+*.partial
+/runs/
+/outputs/
