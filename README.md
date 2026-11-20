@@ -1,8 +1,8 @@
 # TwoPass: Draft-Guided Few-Step Video Prediction for Robotic Manipulation
 
 <p align="center">
-  <a href=""><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b.svg" alt="Paper"></a>
-  <a href=""><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Model-TwoPass-yellow" alt="Model weights: TwoPass"></a>
+  <a href="https://arxiv.org/abs/2611.25553"><img src="https://img.shields.io/badge/arXiv-2611.25553-b31b1b.svg" alt="Paper: arXiv 2611.25553"></a>
+  <a href="https://huggingface.co/Junjun2333/TwoPass"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Model-TwoPass-yellow" alt="Model weights: TwoPass"></a>
   <a href="#citation"><img src="https://img.shields.io/badge/Citation-BibTeX-2563eb" alt="Citation / BibTeX"></a>
   <br>
   <a href="#installation">Install</a> ·
@@ -34,8 +34,8 @@ pip install -r requirements.txt    # Python 3.10, PyTorch 2.8
 
 - **Pretrained weights**, [Wan2.2-TI2V-5B](https://github.com/Wan-Video/Wan2.2):
   ```bash
-  pip install "huggingface_hub[cli]"
-  huggingface-cli download Wan-AI/Wan2.2-TI2V-5B --local-dir ./Wan2.2-TI2V-5B
+  pip install -U huggingface_hub
+  hf download Wan-AI/Wan2.2-TI2V-5B --local-dir ./Wan2.2-TI2V-5B
   ```
 - **Datasets**, Bridge and Language Table as released by
   [IRASim](https://github.com/bytedance/IRASim):
@@ -48,7 +48,15 @@ pip install -r requirements.txt    # Python 3.10, PyTorch 2.8
 - **I3D detector for FVD**, `i3d_torchscript.pt` of
   [StyleGAN-V](https://github.com/universome/stylegan-v):
   <https://www.dropbox.com/s/ge9e5ujwgetktms/i3d_torchscript.pt?dl=1>
-- **TwoPass checkpoints**: [Bridge]() · [Language Table]()
+- **TwoPass checkpoints** on [Hugging Face](https://huggingface.co/Junjun2333/TwoPass):
+  [Bridge](https://huggingface.co/Junjun2333/TwoPass/blob/main/bridge/twopass_bridge.pt) ·
+  [Language Table](https://huggingface.co/Junjun2333/TwoPass/blob/main/languagetable/twopass_languagetable.pt)
+  ```bash
+  hf download Junjun2333/TwoPass --local-dir ./checkpoints
+  ```
+  Pass `./checkpoints/bridge/twopass_bridge.pt` (or
+  `./checkpoints/languagetable/twopass_languagetable.pt`) as `--checkpoint` in
+  [Evaluation](#3-evaluation) to reproduce the results without training.
 
 ## Usage
 
@@ -104,6 +112,21 @@ python -m twopass.aggregate --config configs/bridge.json \
 <p align="center"><img src="assets/comparison.jpg" width="100%" alt="Qualitative comparison on Bridge and Language Table"></p>
 
 ## Citation
+
+If you find TwoPass useful, please cite [our paper](https://arxiv.org/abs/2611.25553):
+
+```bibtex
+@article{liu2026twopass,
+  title         = {TwoPass: Draft-Guided Few-Step Video Prediction for Robotic Manipulation},
+  author        = {Liu, Yijun and Ge, Shijia and Feng, Tongtong and Wang, Xin and Meng, Yuan and Liu, Yuwei and Wang, Zhi and Zhu, Wenwu},
+  journal       = {arXiv preprint arXiv:2611.25553},
+  year          = {2026},
+  eprint        = {2611.25553},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2611.25553}
+}
+```
 
 ## License and acknowledgements
 

@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "TwoPass: Draft-Guided Few-Step Video Prediction for Robotic Manipulation"
+type: software
+authors:
+  - family-names: "Liu"
+    given-names: "Yijun"
+  - family-names: "Ge"
+    given-names: "Shijia"
+  - family-names: "Feng"
+    given-names: "Tongtong"
+  - family-names: "Wang"
+    given-names: "Xin"
+  - family-names: "Meng"
+    given-names: "Yuan"
+  - family-names: "Liu"
+    given-names: "Yuwei"
+  - family-names: "Wang"
+    given-names: "Zhi"
+  - family-names: "Zhu"
+    given-names: "Wenwu"
+repository-code: "https://github.com/PlantPotatoOnMoon/TwoPass"
+url: "https://huggingface.co/Junjun2333/TwoPass"
+license: Apache-2.0
+identifiers:
+  - type: doi
+    value: 10.48550/arXiv.2611.25553
+    description: arXiv DOI of the paper
+preferred-citation:
+  type: article
+  title: "TwoPass: Draft-Guided Few-Step Video Prediction for Robotic Manipulation"
+  authors:
+    - family-names: "Liu"
+      given-names: "Yijun"
+    - family-names: "Ge"
+      given-names: "Shijia"
+    - family-names: "Feng"
+      given-names: "Tongtong"
+    - family-names: "Wang"
+      given-names: "Xin"
+    - family-names: "Meng"
+      given-names: "Yuan"
+    - family-names: "Liu"
+      given-names: "Yuwei"
+    - family-names: "Wang"
+      given-names: "Zhi"
+    - family-names: "Zhu"
+      given-names: "Wenwu"
+  journal: "arXiv preprint arXiv:2611.25553"
+  year: 2026
+  url: "https://arxiv.org/abs/2611.25553"
+  doi: 10.48550/arXiv.2611.25553
